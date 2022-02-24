@@ -14,7 +14,12 @@ function Contact({ innerRef }) {
     }
     return (
         <div ref={innerRef} className='md:h-screen bg-indigo-500 flex'>
-            <form className='md:w-3/5 mx-auto'>
+            <form className='md:w-3/5 mx-auto' 
+                action='https://getform.io/f/c839e519-92fa-4a33-9ab1-c35628ba6bdb' 
+                method='post' 
+                encType='multipart/form-data'
+                target='_blank'
+            >
 
                 <div className='md:flex md:flex-row md:items-center py-12'>
                     {/* inputs  */}
@@ -22,23 +27,23 @@ function Contact({ innerRef }) {
                         <h1 className='text-4xl font-bold text-white mb-12'>Contact me</h1>
 
                         <div className='mb-4'>
-                            <input className='rounded-md p-4 w-full'placeholder='Name'/>
+                            <input className='rounded-md p-4 w-full'placeholder='Name'name='name'/>
                         </div>
                         <div className='mb-4'>
-                            <input type='email' className='rounded-md p-4 w-full'placeholder='Email'/>
+                            <input type='email' className='rounded-md p-4 w-full'placeholder='Email'name='email'/>
                         </div>
                         <div className='mb-4'>
-                            <input type='tel' className='rounded-md p-4 w-full'placeholder='Phone'/>
+                            <input type='tel' className='rounded-md p-4 w-full'placeholder='Phone' name='phone'/>
                         </div>
                         <div className='mb-4'>
-                            <textarea className='rounded-md p-4 w-full'placeholder='Message'rows={10}/>
+                            <textarea className='rounded-md p-4 w-full'placeholder='Message'rows={10} name='message'/>
                         </div>
                     </div>
 
                     {/* file */}
                     <div className='md:w-1/2 flex flex-col items-center justify-center'>
                         <label htmlFor='file-upload' className="custom-file-upload">
-                            <input id='file-upload' type="file" className='hidden' onChange={previewFile} ref={fileRef}/>
+                            <input id='file-upload' name='file' type="file" className='hidden' onChange={previewFile} ref={fileRef}/>
                             <Clip className='w-24 h-24 text-gray-100 hover:scale-110 transition ease-in-out'/>
                         </label>
                         <span className='text-gray-100'>{filename}</span>
