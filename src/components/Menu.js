@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
 function Menu() {
     return (
@@ -7,7 +8,7 @@ function Menu() {
                 <span className='font-bold'>Nicolas Carignani</span>
             </div>
             <div>
-                <a href='#' className='font-bold mr-8'>Blog</a>
+                <Link to='/blog' className='font-bold mr-8'>Blog</Link>
                 <a href='#' className='font-bold mr-8'>About</a>
                 <a href='https://www.linkedin.com/in/nicolas-carignani' target='_blank' className='font-bold mr-8'>Linkedin</a>
                 <a href='#' className='font-bold mr-8'>Contact</a>
